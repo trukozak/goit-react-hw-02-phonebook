@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FilterStyled } from './FilterStyled';
 
-const Filter = ({ onHandleChange }) => {
+const Filter = ({ filter, onHandleChange }) => {
   return (
     <FilterStyled>
       <label className="labelFilter">
@@ -11,6 +11,7 @@ const Filter = ({ onHandleChange }) => {
           className="inputFilter"
           type="text"
           name="filter"
+          value={filter}
           onChange={onHandleChange}
         />
       </label>
@@ -19,6 +20,7 @@ const Filter = ({ onHandleChange }) => {
 };
 
 Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
   onHandleChange: PropTypes.func.isRequired,
 };
 export default Filter;

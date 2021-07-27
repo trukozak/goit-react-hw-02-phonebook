@@ -36,7 +36,7 @@ class App extends Component {
           <AdvForm onSubmit={this.addNewContact} contacts={contacts} />
         </Section>
         <Section title="Contacts">
-          <Filter onHandleChange={this.onHandleChange} />
+          <Filter filter={filter} onHandleChange={this.onHandleChange} />
           <ContactsList
             contacts={contacts}
             filter={filter}
