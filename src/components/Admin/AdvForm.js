@@ -26,7 +26,7 @@ class AdvForm extends Component {
     };
 
     const sameContactName = this.props.contacts.find(
-      contact => contact.name === this.state.name,
+      contact => contact.name.toLowerCase() === this.state.name.toLowerCase(),
     );
     if (sameContactName) {
       return alert(`${this.state.name} is already in contacts.`);
